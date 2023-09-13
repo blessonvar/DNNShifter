@@ -24,7 +24,7 @@ class Model(base.Model):
             self.bn = nn.BatchNorm2d(out_filters)
 
         def forward(self, x):
-            if hasattr(self, 'bn')
+            if hasattr(self, 'bn'):
                 return F.relu(self.bn(self.conv(x)))
             else:
                 return F.relu(self.conv(x))
