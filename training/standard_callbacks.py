@@ -94,9 +94,6 @@ def create_eval_callback(eval_name: str, loader: DataLoader, verbose=False):
                     100 * top5_correct/example_count, int(example_count), elapsed)
                 print(training_info)
 
-                f = open("Data_Distribution/Plot_Details.txt", "a")
-                f.write("\n"+training_info)
-                f.close()
                 time_of_last_call = time.time()
                 logger.add('{}_elapsed'.format(eval_name), step, elapsed)
 
